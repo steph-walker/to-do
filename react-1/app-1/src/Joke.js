@@ -14,4 +14,9 @@ return (
 }
 
 export default Joke
+
+
 //<br> = break or new line
+//{{color: props.question ? "black" : "red"}}
+//the line above changes the text color to red if we dont provide a question
+//if we do have a question the text is black

@@ -1,15 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Joke from './Joke'
+import Main from './Main'
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Joke question="name is" answer="stephanie"/>
-    <Joke question="name is" answer="stephanie"/>
-    <Joke question="name is" answer="stephanie"/>
-    <Joke question="name is" answer="stephanie"/>
-    <Joke  answer="stephanie"/>
+    <Main />
+  
   </React.StrictMode>,
   document.getElementById('root')
 );
