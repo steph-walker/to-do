@@ -1,34 +1,33 @@
-import React from 'react'
-import Joke from './Joke'
-import Datas from './Datas'
-import HousingData from './components/HousingData'
-import HousingStruct from './components/HousingStruct'
+import React from "react";
+import Joke from "./Joke";
+import Datas from "./Datas";
+import HousingData from "./components/HousingData";
+import HousingStruct from "./components/HousingStruct";
 
 function Main() {
-
-    const jokesComp = Datas.map((Indjoke) => {
-        return (
-            <Joke key={Indjoke.id} question={Indjoke.question} answer={Indjoke.answer}/>
-        )
-    })
-
-    const product = HousingData.map((item) => {
+  const jokesComp = Datas.map((Indjoke) => {
     return (
-            <HousingStruct product={item} />
-            )
-    })
+      <Joke
+        key={Indjoke.id}
+        question={Indjoke.question}
+        answer={Indjoke.answer}
+      />
+    );
+  });
+
+  const product = HousingData.map((item) => {
+    return <HousingStruct key={item.id} product={item} />;
+  });
 
   return (
     <div>
       {jokesComp}
       {product}
-     
     </div>
   );
 }
 
-export default Main
-
+export default Main;
 
 //.map goes through every value in the array/input given and returns
 //the specified format or command given

@@ -1,18 +1,24 @@
-import React from "react";
-import TodoItem from "./TodoItem";
-import Contacts from "./Contacts";
+import React from 'react'
+import TodoItem from './TodoItem'
+import Contacts from './Contacts'
+import todosData from './TodoData'
 
 function MainPage() {
+
+  const todoItem = todosData.map((item) => {
+    return (
+      <TodoItem item={item} key={item.id} text={item.text} />
+    )
+    
+  })
   return (
     <main >
         <div className="to-do-list">
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+        {todoItem}
+      {/* <TodoItem /> */}
       </div>
+     
+      
 
       <div className="cats">
         <Contacts
@@ -29,7 +35,7 @@ function MainPage() {
           email="fluff@me.com"
         />
 
-        <Contacts
+        <Contacts 
           name="Destroyer"
           imgUrl="http://placekitten.com/400/300"
           phone="(212) 555-3456"
@@ -43,7 +49,7 @@ function MainPage() {
         />
       </div>
     </main>
-  );
+  )
 }
 
-export default MainPage;
+export default MainPage
