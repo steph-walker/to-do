@@ -1,6 +1,8 @@
 import React from 'react'
-import Joke from "./Joke";
-import Datas from "./Datas";
+import Joke from './Joke'
+import Datas from './Datas'
+import HousingData from './components/HousingData'
+import HousingStruct from './components/HousingStruct'
 
 function Main() {
 
@@ -9,9 +11,17 @@ function Main() {
             <Joke key={Indjoke.id} question={Indjoke.question} answer={Indjoke.answer}/>
         )
     })
+
+    const product = HousingData.map((item) => {
+    return (
+            <HousingStruct product={item} />
+            )
+    })
+
   return (
     <div>
       {jokesComp}
+      {product}
      
     </div>
   );
