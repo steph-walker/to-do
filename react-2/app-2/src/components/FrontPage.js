@@ -5,6 +5,7 @@ import '../style.css'
 import ClassEx from './classEx'
 import StatePractice from './StatePractice'
 
+
 function FrontPage() {
   return (
     <div>
@@ -12,6 +13,8 @@ function FrontPage() {
       <Main />
       <ClassEx />
       <StatePractice />
+
+     
 
      
     </div>

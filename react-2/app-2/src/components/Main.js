@@ -2,18 +2,21 @@ import React from 'react'
 import TodoItem from './TodoItem'
 import Contacts from './Contacts'
 import todosData from './TodoData'
+import Events from './Events'
 
 function MainPage() {
 
   const todoItem = todosData.map((item) => {
     return (
-      <TodoItem item={item} key={item.id} text={item.text} />
+      <TodoItem item={item} key={item.id} text={item.text}  />
     )
     
   })
+
   return (
     <main >
         <div className="to-do-list">
+          <h1>Version 1 of to-do list</h1>
         {todoItem}
       {/* <TodoItem /> */}
       </div>
@@ -48,8 +51,15 @@ function MainPage() {
           email="thecat@hotmail.com"
         />
       </div>
+
+     
+
+      <div>
+        <Events />
+      </div>
     </main>
   )
 }
 
-export default MainPage
+
+export default MainPage 
