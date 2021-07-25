@@ -3,6 +3,7 @@ import TodoItem from "./TodoItem"
 import todosData from "./todosData"
 import './style.css'
 import Button from './ButtonPractice'
+import Cond from './components/CondRender'
 
 class App extends React.Component {
     constructor() {
@@ -38,9 +39,9 @@ class App extends React.Component {
                 {todoItems }
             </div>
 
-            <div>
-                <Button />
-            </div>
+            <div> <Button /> </div>
+            <div> <Cond  isLoading={this.state.isLoading}  /> </div>
+
             </div>
         )    
     }

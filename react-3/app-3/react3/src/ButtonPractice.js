@@ -1,14 +1,21 @@
+
 import React from 'react'
+import randomColor from 'randomcolor'
+
+
+
 
 class App extends React.Component {
 	constructor() {
 		super()
 		this.state = {
-			count:0
+			count: 0,
+			color: ""
 		}
-		this.handleClick = this.handleClick.bind(this)
+		this.increment = this.increment.bind(this)
+		this.decrement = this.decrement.bind(this)
 	}
-	handleClick() {
+	increment() {
 		// console.log("You clicked the bttn")
 		//anytime you want to change state you call setState
 		//below is one example
@@ -19,18 +26,39 @@ class App extends React.Component {
 
 		this.setState(prevSate => {
 			return {
-				count: prevSate.count + 1
+				count: prevSate.count + 1,
+				color: randomColor()
 			}
 		})
 	}
 
+	decrement() {
+		this.setState(prevSate => {
+			return {
+				count: prevSate.count - 1,
+				color: randomColor()
+			}
+		})
+	}
+
+	//example of how to use component did update method
+	// componentDidUpdate(prevState) {
+	// 	if (prevState.count !== this.state.count) {
+	// 		const newColor = randomcolor()
+	// 		this.setState({ color: newColor })
+
+	// 	}
+
+	// }
+
 
 
 	render() {
-		return(
+		return (
 			<div>
-				<h1>{this.state.count}</h1>
-				<button onClick={this.handleClick}>Click</button>
+				<h1 style={{ color: this.state.color }}>{this.state.count}</h1>
+				<button onClick={this.increment}>Add</button>
+				<button onClick={this.decrement}>Subtract</button>
 			</div>
 		)
 	}
