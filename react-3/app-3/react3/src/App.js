@@ -4,6 +4,7 @@ import todosData from "./todosData"
 import './style.css'
 import Button from './ButtonPractice'
 import Cond from './components/CondRender'
+import Logged from './components/IsLoggedIn'
 
 class App extends React.Component {
     constructor() {
@@ -31,7 +32,7 @@ class App extends React.Component {
     
     render() {
         const todoItems = this.state.todos.map(item => 
-        <TodoItem key={item.id} item={item} onChange={this.handleChange}/>)
+        <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
         
         return (
             <div>
@@ -41,6 +42,7 @@ class App extends React.Component {
 
             <div> <Button /> </div>
             <div> <Cond  isLoading={this.state.isLoading}  /> </div>
+            <div> <Logged /> </div>
 
             </div>
         )    
