@@ -2,10 +2,15 @@ import React from 'react'
 import Cond from './Cond'
 
 class Cycle extends React.Component {
+
 	constructor() {
 		super()
 		this.state = {
-			isLoading: true
+			isLoading: true,
+			unreadMsg: [
+				"mom"
+			]
+			
 		}
 	}
 
@@ -21,8 +26,10 @@ class Cycle extends React.Component {
 
 		return (
 			<div>
-				<Cond/>
+				<Cond/>,
+				<h1>You have {this.state.unreadMsg.length} unread messages</h1>
 			</div>
+		
 		)
 	}
 }
