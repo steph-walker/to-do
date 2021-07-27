@@ -9,6 +9,7 @@ class App extends React.Component {
       isLoading: true
     }
   }
+  //what the fuck
 
   componentDidMount() {
     this.setState({isLoading: true})
