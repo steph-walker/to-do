@@ -1,5 +1,9 @@
 import React from 'react'
 
+import Form1 from './components/Form-1'
+import Form2 from './components/Form-2'
+import Form3 from './components/Form-3'
+
 class App extends React.Component {
 
   constructor() {
@@ -31,6 +35,17 @@ class App extends React.Component {
     return(
       <div>
         {text}
+        <div>
+          <p>------------------------------------------</p>
+          <h2>Example of the First type of form</h2>
+        <Form1 />
+        <p>------------------------------------------</p>
+          <h2>Example of the Second type of form</h2>
+        <Form2 />
+        <p>------------------------------------------</p>
+          <h2>Example of the Third type of form</h2>
+        <Form3 />
+        </div>
       </div>
     )
   }
