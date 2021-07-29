@@ -4,6 +4,8 @@ import Form1 from './components/Form-1'
 import Form2 from './components/Form-2'
 import Form3 from './components/Form-3'
 
+import FormV2 from './form-redo/FormV2'
+
 class App extends React.Component {
 
   constructor() {
@@ -13,7 +15,7 @@ class App extends React.Component {
       isLoading: true
     }
   }
-  //what the fuck
+  
 
   componentDidMount() {
     this.setState({isLoading: true})
@@ -45,6 +47,10 @@ class App extends React.Component {
         <p>------------------------------------------</p>
           <h2>Example of the Third type of form</h2>
         <Form3 />
+        </div>
+
+        <div>
+          <FormV2 />
         </div>
       </div>
     )
